@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About 8b4t</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        h2 {
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #00bfff;
+            font-weight: bold;
+        }
+
+        .ip {
+            background: #222;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #ff4747;
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #d63030;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>About 8Builders4Tools (8b4t)</h2>
+        <p><span class="highlight">8b4t</span> is a <strong>Minecraft Java Edition anarchy server</strong> that first opened on <strong>January 6th, 2024</strong>. It has <strong>no map resets</strong> and <strong>no rules</strong>, allowing players to do whatever they want.</p>
+        
+        <p>The server supports <strong>cracked players</strong> with a <code>/register</code> and <code>/login</code> plugin system. The owner of 8b4t is <span class="highlight">OG_Minecrafter</span>.</p>
+
+        <p>The server stays <strong>close to vanilla</strong> with minimal modifications. <span class="highlight">Hack clients and cheats</span> are allowed, but a light anticheat and exploit fix plugin prevent game-breaking exploits.</p>
+
+        <p>Server IP: <span class="ip">8b4t.com</span></p>
+
+        <p>Hosted on <strong>1.21.4</strong>, but older clients <strong>1.8+</strong> can still join (with some limitations).</p>
+
+        <button onclick="goBack()">Back to Main Page</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "main.html";
+        }
+    </script>
+
+</body>
+</html>

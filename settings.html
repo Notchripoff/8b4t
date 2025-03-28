@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 2rem;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        label, select, input {
+            display: block;
+            margin: 10px auto;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .back-button {
+            background: #dc3545;
+            margin-top: 15px;
+        }
+        .back-button:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Settings</h2>
+        
+        <label for="pageTitle">Change Page Title:</label>
+        <input type="text" id="pageTitle" placeholder="Enter new title">
+
+        <label for="themeSelect">Change Button & Footer Theme:</label>
+        <select id="themeSelect">
+            <option value="default">Default (Black)</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+
+        <button onclick="saveSettings()">Save Settings</button>
+        <button class="back-button" onclick="goBack()">Back to Main Page</button>
+    </div>
+
+    <script>
+        function saveSettings() {
+            let title = document.getElementById("pageTitle").value;
+            let theme = document.getElementById("themeSelect").value;
+
+            localStorage.setItem("pageTitle", title);
+            localStorage.setItem("theme", theme);
+
+            alert("Settings Saved! Refresh main.html to see changes.");
+        }
+
+        function goBack() {
+            window.location.href = "main.html";
+        }
+    </script>
+
+</body>
+</html>
